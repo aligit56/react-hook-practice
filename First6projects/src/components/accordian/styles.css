@@ -1,0 +1,21 @@
+.accordion-panel { min-width: 0; }
+.accordion-toolbar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 13px; color: #8a9892; border-bottom: 1px solid #d8d8cd; font: 11px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+.mode-toggle { display: inline-flex; align-items: center; gap: 8px; padding: 6px 0; border: 0; color: #63716d; background: transparent; cursor: pointer; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+.toggle-indicator { width: 25px; height: 14px; padding: 2px; border: 1px solid #aebbb5; border-radius: 20px; transition: background .25s, border-color .25s; }
+.toggle-indicator::after { display: block; width: 8px; height: 8px; border-radius: 50%; background: #aebbb5; content: ''; transition: transform .25s, background .25s; }
+.mode-toggle.is-active { color: #bf4c35; }
+.mode-toggle.is-active .toggle-indicator { border-color: #bf4c35; background: #bf4c35; }
+.mode-toggle.is-active .toggle-indicator::after { background: #f8f7f2; transform: translateX(11px); }
+.accordian { border-bottom: 1px solid #d8d8cd; }
+.item { border-top: 1px solid #d8d8cd; }
+.item:first-child { border-top: 0; }
+.title { display: grid; grid-template-columns: 38px 1fr 28px; gap: 14px; width: 100%; padding: 22px 0; border: 0; color: #172b2b; background: transparent; text-align: left; cursor: pointer; align-items: center; }
+.title:hover .question { color: #bf4c35; }
+.title:focus-visible, .mode-toggle:focus-visible { outline: 2px solid #bf4c35; outline-offset: 4px; }
+.question-number { color: #bf4c35; font: 700 11px/1 'Trebuchet MS', sans-serif; letter-spacing: 1px; }
+.question { font: 600 17px/1.35 'Trebuchet MS', sans-serif; transition: color .2s; }
+.plus { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid #bf4c35; border-radius: 50%; color: #bf4c35; font: 24px/1 Georgia, serif; transition: transform .25s, background .25s, color .25s; }
+.is-open .plus { color: #f8f7f2; background: #bf4c35; transform: rotate(45deg); }
+.acc-content { max-width: 560px; padding: 0 42px 24px 52px; color: #63716d; font: 14px/1.65 'Trebuchet MS', sans-serif; }
+.empty-state { padding: 20px 0; color: #63716d; }
+@media (max-width: 500px) { .title { grid-template-columns: 28px 1fr 28px; gap: 9px; padding: 18px 0; } .question { font-size: 15px; } .acc-content { padding-left: 37px; padding-right: 0; } .accordion-toolbar { align-items: flex-start; gap: 16px; } .mode-toggle { text-align: right; } }
