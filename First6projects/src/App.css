@@ -1,15 +1,27 @@
-.page-shell { width: min(1120px, 100%); min-height: 100svh; margin: 0 auto; padding: 52px clamp(22px, 7vw, 92px) 28px; box-sizing: border-box; background: #f8f7f2; }
-.intro { max-width: 720px; padding: 15px 0 78px; }
-.eyebrow, .section-label, footer { color: #bf4c35; font: 700 11px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 2px; }
-.eyebrow { display: flex; align-items: center; gap: 10px; }
-.eyebrow-mark { width: 24px; height: 3px; background: #bf4c35; }
-.intro h1 { margin: 25px 0 17px; color: #172b2b; font: 500 clamp(48px, 7vw, 86px)/.93 Georgia, serif; letter-spacing: -3px; }
-.intro h1 em { color: #bf4c35; font-style: italic; }
-.intro-copy { max-width: 500px; color: #63716d; font: 17px/1.6 'Trebuchet MS', sans-serif; }
-.faq-layout { display: grid; grid-template-columns: minmax(200px, .72fr) minmax(0, 1.5fr); gap: clamp(40px, 8vw, 120px); align-items: start; }
-.faq-aside { border-top: 2px solid #172b2b; padding-top: 18px; }
-.faq-aside h2 { margin: 17px 0 12px; color: #172b2b; font: 500 28px/1.1 Georgia, serif; }
-.faq-aside > p:last-child { color: #76817d; font: 14px/1.6 'Trebuchet MS', sans-serif; }
-footer { display: flex; align-items: center; gap: 12px; margin-top: 84px; color: #8a9892; font-size: 10px; }
-.footer-dot { width: 4px; height: 4px; background: #bf4c35; border-radius: 50%; }
-@media (max-width: 700px) { .page-shell { padding-top: 30px; } .intro { padding-bottom: 52px; } .faq-layout { grid-template-columns: 1fr; gap: 42px; } footer { margin-top: 58px; } }
+.tic-tac-toe-container { --cream: #f6f1e8; --ink: #182f35; --coral: #e4674d; min-height: 100svh; padding: 30px clamp(22px, 6vw, 90px) 24px; color: var(--ink); background: var(--cream); }
+.game-header, .game-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; color: #71817e; font: 700 10px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 2px; }
+.eyebrow, .turn-count, .section-label, .game-footer { margin: 0; }
+.eyebrow { display: flex; align-items: center; gap: 10px; color: var(--coral); }
+.eyebrow-mark { width: 24px; height: 3px; background: var(--coral); }
+.game-content { display: grid; grid-template-columns: minmax(220px, .8fr) minmax(320px, 1fr); gap: clamp(45px, 11vw, 170px); align-items: center; width: min(1050px, 100%); margin: auto; }
+.game-intro { border-top: 2px solid var(--ink); padding-top: 20px; }
+.section-label { color: var(--coral); font: 700 11px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 3px; }
+.game-intro h1 { margin: 22px 0 20px; color: var(--ink); font: 500 clamp(56px, 8vw, 100px)/.88 Georgia, serif; letter-spacing: -4px; }
+.game-intro h1 em { color: var(--coral); font-style: italic; }
+.game-description { max-width: 250px; color: #71817e; font: 15px/1.6 'Trebuchet MS', sans-serif; }
+.board-area { display: flex; flex-direction: column; align-items: center; }
+.status { min-height: 20px; margin: 0 0 18px; color: #71817e; font: 700 11px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+.status.winner { color: var(--coral); }
+.board { display: grid; grid-template-columns: repeat(3, minmax(75px, 118px)); grid-template-rows: repeat(3, minmax(75px, 118px)); gap: 10px; }
+.square { display: grid; place-items: center; width: 100%; height: 100%; padding: 0; border: 0; color: var(--ink); background: #e6dfd3; cursor: pointer; font: 500 clamp(42px, 7vw, 68px)/1 Georgia, serif; transition: background .2s, transform .2s, color .2s; }
+.square:hover:not(:disabled) { background: #ddd3c4; transform: translateY(-3px); }
+.square:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+.square:disabled { cursor: default; }
+.square:nth-child(odd) { color: var(--coral); }
+.square.winning { color: var(--cream); background: var(--coral); }
+.restart-button { margin-top: 24px; padding: 12px 18px; border: 1px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; font-size: 13px; transition: color .2s, background .2s; }
+.restart-button:hover { color: var(--cream); background: var(--ink); }
+.restart-button:focus-visible { outline: 2px solid var(--coral); outline-offset: 4px; }
+.restart-button span { margin-left: 13px; font-size: 17px; }
+.game-footer { margin-top: 50px; }
+@media (max-width: 700px) { .tic-tac-toe-container { padding-top: 22px; } .game-content { grid-template-columns: 1fr; gap: 48px; padding-top: 60px; } .game-intro h1 { font-size: clamp(56px, 17vw, 88px); } .game-footer { margin-top: 55px; flex-direction: column; align-items: flex-start; gap: 9px; } }
