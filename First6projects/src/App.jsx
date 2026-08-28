@@ -1,19 +1,20 @@
-import TicTacToe from './components/tic-tac-toe'
+// import TicTacToe from './components/tic-tac-toe'
 // import Accordian from './components/accordian'
- import RandomColor from './components/randomcolor'
+// import RandomColor from './components/randomcolor'
+import UseFetchHookTest from './components/use-fetch/test'
 import './App.css'
 
 function App() {
   return (
     <>
-      {/*<TicTacToe />*/}
+      {/* <TicTacToe /> */}
 
-      {/* To run Accordian, comment out TicTacToe and RandomColor, then uncomment this line. */}
       {/* <Accordian /> */}
 
-      {/* To run RandomColor, comment out TicTacToe and Accordian, then uncomment this line. */}
-      <RandomColor /> 
+      {/* <RandomColor /> */}
+      <UseFetchHookTest />
     </>
+  
   )
 }
 

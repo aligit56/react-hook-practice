@@ -16,7 +16,7 @@ export default function Accordian() {
       ? current.filter((id) => id !== getCurrentId)
       : [...current, getCurrentId])
   }
-
+     
   return (
     <div className="accordion-panel">
       <div className="accordion-toolbar">
