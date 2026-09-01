@@ -13,9 +13,13 @@ function App() {
       {/* <Accordian /> */}
 
       {/* <RandomColor /> */}
+
       <UseWindowResizeTest />
+
       {/* <UseFetchHookTest /> */}
-        {/* Use Onclick Outside Hook Test */}
+
+      {/* Use Onclick Outside Hook Test */}
+
       {/* <main className="app-shell">
         <header className="app-header">
           <p className="app-kicker">React hook practice / 06</p>
