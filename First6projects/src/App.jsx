@@ -1,7 +1,8 @@
 // import TicTacToe from './components/tic-tac-toe'
 // import Accordian from './components/accordian'
 // import RandomColor from './components/randomcolor'
-import UseFetchHookTest from './components/use-fetch/test'
+// import UseOnclickOutsideTest from './components/use-outside-click/test'
+import UseWindowResizeTest from "./components/use-window-resize/test";
 import './App.css'
 
 function App() {
@@ -12,7 +13,16 @@ function App() {
       {/* <Accordian /> */}
 
       {/* <RandomColor /> */}
-      <UseFetchHookTest />
+      <UseWindowResizeTest />
+      {/* <UseFetchHookTest /> */}
+        {/* Use Onclick Outside Hook Test */}
+      {/* <main className="app-shell">
+        <header className="app-header">
+          <p className="app-kicker">React hook practice / 06</p>
+          <span className="app-status"><i /> interactive demo</span>
+        </header>
+        <UseOnclickOutsideTest />
+      </main> */}
     </>
   
   )

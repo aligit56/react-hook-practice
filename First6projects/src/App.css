@@ -1,3 +1,41 @@
+.app-shell {
+	min-height: 100svh;
+	padding: 28px clamp(22px, 6vw, 88px) 42px;
+	color: #193b3d;
+	background: #f4efe5;
+	background-image: radial-gradient(#d9cdbb 0.7px, transparent 0.7px);
+	background-size: 18px 18px;
+}
+.app-header { display: flex; justify-content: space-between; align-items: center; width: min(1120px, 100%); margin: 0 auto; padding-bottom: 18px; border-bottom: 1px solid #cfc3b2; color: #6c7973; font: 700 10px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+.app-kicker { margin: 0; }
+.app-status { display: flex; align-items: center; gap: 8px; }
+.app-status i, .panel-dot, .stage-note span { width: 7px; height: 7px; border-radius: 50%; background: #e4674d; }
+.outside-demo { display: grid; grid-template-columns: minmax(250px, .8fr) minmax(320px, 1fr); gap: clamp(45px, 10vw, 160px); align-items: center; width: min(1120px, 100%); min-height: calc(100svh - 112px); margin: 0 auto; }
+.demo-copy { border-top: 2px solid #193b3d; padding-top: 20px; }
+.demo-label { margin: 0 0 22px; color: #e4674d; font: 700 11px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 3px; text-transform: uppercase; }
+.demo-copy h1 { margin: 0 0 22px; color: #193b3d; font: 500 clamp(56px, 8vw, 104px)/.88 Georgia, serif; letter-spacing: -4px; }
+.demo-copy h1 em { color: #e4674d; font-style: italic; }
+.demo-description { max-width: 280px; margin: 0; color: #6c7973; font: 15px/1.65 'Trebuchet MS', sans-serif; }
+.demo-stage { display: flex; flex-direction: column; align-items: center; }
+.demo-panel-wrap { width: min(100%, 430px); min-height: 280px; }
+.content-panel, .open-button { width: 100%; min-height: 280px; padding: 32px; border: 1px solid #193b3d; text-align: left; box-shadow: 12px 12px 0 #d9cdbb; }
+.content-panel { animation: panel-in .3s ease-out both; background: #193b3d; color: #f4efe5; }
+.panel-topline { display: flex; align-items: center; gap: 9px; color: #e4674d; font: 700 10px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+.content-panel h2 { margin: 66px 0 10px; font: 500 34px/1 Georgia, serif; }
+.content-panel p { max-width: 260px; margin: 0; color: #b7c2ba; font: 14px/1.55 'Trebuchet MS', sans-serif; }
+.open-button { display: flex; align-items: center; gap: 16px; background: #fbf8f1; color: #193b3d; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; }
+.open-button:hover { transform: translate(-4px, -4px); box-shadow: 16px 16px 0 #e4674d; background: #fffdf8; }
+.open-button:focus-visible, .close-button:focus-visible { outline: 3px solid #e4674d; outline-offset: 4px; }
+.open-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #e4674d; color: #e4674d; font-size: 27px; line-height: 1; }
+.open-button strong, .open-button small { display: block; }
+.open-button strong { margin-bottom: 7px; font: 500 21px Georgia, serif; }
+.open-button small { color: #6c7973; font: 11px 'Trebuchet MS', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+.arrow { margin-left: auto; color: #e4674d; font-size: 25px; }
+.close-button { margin-top: 28px; padding: 9px 0; border: 0; border-bottom: 1px solid #e4674d; color: #f4efe5; background: transparent; cursor: pointer; font: 700 11px 'Trebuchet MS', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+.close-button span { margin-left: 8px; color: #e4674d; }
+.stage-note { display: flex; align-items: center; gap: 9px; margin: 28px 0 0; color: #6c7973; font: 700 10px 'Trebuchet MS', sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+@keyframes panel-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 700px) { .app-shell { padding-top: 20px; } .app-status { display: none; } .outside-demo { grid-template-columns: 1fr; gap: 54px; padding: 64px 0 28px; } .demo-copy h1 { font-size: clamp(58px, 17vw, 88px); } .demo-stage { width: 100%; } .content-panel, .open-button { min-height: 250px; padding: 26px; } .content-panel h2 { margin-top: 48px; } }
 .tic-tac-toe-container { --cream: #f6f1e8; --ink: #182f35; --coral: #e4674d; min-height: 100svh; padding: 30px clamp(22px, 6vw, 90px) 24px; color: var(--ink); background: var(--cream); }
 .game-header, .game-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; color: #71817e; font: 700 10px/1.2 'Trebuchet MS', sans-serif; letter-spacing: 2px; }
 .eyebrow, .turn-count, .section-label, .game-footer { margin: 0; }
